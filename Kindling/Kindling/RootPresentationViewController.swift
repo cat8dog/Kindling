@@ -1,15 +1,14 @@
-//
-//  RootPresentationViewController.swift
-//  Kindling
-//
-//  Created by Catherine Reyto on 2015-08-25.
-//  Copyright (c) 2015 Catherine Reyto. All rights reserved.
-//
-
 import UIKit
 
 class RootPresentationViewController: UIViewController {
 
+    @IBOutlet weak var horizontalConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var cardContainter: UIView!
+  
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +18,8 @@ class RootPresentationViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
+      //  var gesture = UIPanGestureRecognizer(target: self, action: Selector ("wasSwipped:"))
     }
     
 

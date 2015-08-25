@@ -3,11 +3,20 @@ import UIKit
 class CardViewController: UIViewController {
 
     @IBOutlet weak var myImage: UIImageView!
+    
 
+    @IBAction func swipeImage(sender: UIPanGestureRecognizer) {
+        println("I poooooped")
+    }
+
+ 
+    
+    
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//     
+//
 //    topLayerView.cornerRadius = 20.0
 //    bottomLayerView.cornerRadius = 35.0
     
@@ -25,7 +34,10 @@ class CardViewController: UIViewController {
         super.viewDidLayoutSubviews()
         myImage.layer.cornerRadius = (myImage.bounds.size.width + myImage.bounds.size.height) / 4
         myImage.clipsToBounds = true
+        
     }
+    
+    
     
     /*
     // MARK: - Navigation
