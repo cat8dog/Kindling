@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Root Presentation View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RootPresentationViewController" customModule="Kindling" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wOd-24-NKU">
+                                <rect key="frame" x="180" y="83" width="240" height="280"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="VRB-MN-hzi"/>
+                                    <constraint firstAttribute="width" constant="240" id="kpQ-4w-2Uu"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="8vN-7t-aEj" kind="embed" id="vE7-jM-0Dz"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wOd-24-NKU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Ket-k2-TxA"/>
+                            <constraint firstAttribute="centerX" secondItem="wOd-24-NKU" secondAttribute="centerX" id="gi1-jL-UHO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="daJ-eH-FNV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="179"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yyv-aC-fjS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f0V-yo-5t2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YVr-RL-6Oj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TgB-cW-ZXR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vAp-0S-4K8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="447" y="198"/>
+        </scene>
+        <!--Card View Controller-->
+        <scene sceneID="ALL-4g-uyR">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8vN-7t-aEj" customClass="CardViewController" customModule="Kindling" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yzv-hb-TX4"/>
+                        <viewControllerLayoutGuide type="bottom" id="E9J-nt-ROl"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hYA-q8-NlY">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="280"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Zebra" translatesAutoresizingMaskIntoConstraints="NO" id="sXU-Ak-ra7">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sXU-Ak-ra7" secondAttribute="height" multiplier="6:7" id="COu-8i-Uwz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="POOP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPf-Cu-63g">
+                                <rect key="frame" x="96" y="167" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POOPOPOPOPOPP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQm-rU-OEi">
+                                <rect key="frame" x="42" y="214" width="156" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="EPf-Cu-63g" secondAttribute="centerY" constant="-37.5" id="5mG-eb-JJl"/>
+                            <constraint firstAttribute="centerY" secondItem="RQm-rU-OEi" secondAttribute="centerY" constant="-84.5" id="EM0-5B-eH9"/>
+                            <constraint firstAttribute="centerX" secondItem="RQm-rU-OEi" secondAttribute="centerX" id="H6Q-BS-7in"/>
+                            <constraint firstItem="RQm-rU-OEi" firstAttribute="top" secondItem="EPf-Cu-63g" secondAttribute="bottom" constant="26" id="MqK-7B-Re7"/>
+                            <constraint firstAttribute="centerX" secondItem="EPf-Cu-63g" secondAttribute="centerX" constant="-0.5" id="OH8-Zd-NbR"/>
+                            <constraint firstItem="sXU-Ak-ra7" firstAttribute="leading" secondItem="hYA-q8-NlY" secondAttribute="leading" id="nwO-zA-1Rw"/>
+                            <constraint firstItem="sXU-Ak-ra7" firstAttribute="top" secondItem="Yzv-hb-TX4" secondAttribute="bottom" id="onl-IV-sAn"/>
+                            <constraint firstItem="sXU-Ak-ra7" firstAttribute="bottom" secondItem="E9J-nt-ROl" secondAttribute="top" id="ych-xt-lAR"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="myImage" destination="sXU-Ak-ra7" id="wpu-df-HA6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sVF-4x-Cy1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1312" y="-312"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Zebra" width="1568" height="2048"/>
+    </resources>
+</document>
