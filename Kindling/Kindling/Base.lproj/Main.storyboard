@@ -90,7 +90,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stuff stuff stuff" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cH-Se-pod">
-                                <rect key="frame" x="65" y="251.5" width="110" height="20.5"/>
+                                <rect key="frame" x="65" y="251" width="110" height="20.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -115,6 +115,7 @@
                     <toolbarItems/>
                     <connections>
                         <outlet property="myImage" destination="sXU-Ak-ra7" id="wpu-df-HA6"/>
+                        <outlet property="panFromCentre" destination="B1w-WW-WF0" id="f95-Vr-tfj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sVF-4x-Cy1" userLabel="First Responder" sceneMemberID="firstResponder"/>

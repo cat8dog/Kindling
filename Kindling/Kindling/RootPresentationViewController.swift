@@ -7,8 +7,6 @@ class RootPresentationViewController: UIViewController {
     @IBOutlet weak var cardContainter: UIView!
   
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
