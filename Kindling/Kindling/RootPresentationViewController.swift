@@ -1,5 +1,6 @@
 import UIKit
 
+
 class RootPresentationViewController: UIViewController {
 
     @IBOutlet weak var cardContainerView: UIView!
@@ -7,45 +8,97 @@ class RootPresentationViewController: UIViewController {
     
     @IBOutlet weak var horizontalCenterConstraint: NSLayoutConstraint!
     
+    var swipeToChoose:SelectionState = .NoSelection {
+        didSet {
+            
+        }
+    }
+    
+    enum SelectionState {
+ 
+        case NoSelection
+        
+        case LikeSelection
+        
+        case DislikeSelection
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        horizontalCenterConstraint.constant = 0
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-        
-      //  var gesture = UIPanGestureRecognizer(target: self, action: Selector ("wasSwipped:"))
+       
     }
     
     @IBAction func didPan(sender: UIPanGestureRecognizer) {
+  
         
         switch sender.state {
             
         case .Began :
             
+            swipeToChoose = .NoSelection
             println ("pan did begin")
             
-        case .Changed :
+            case .Changed :
             var panVector = sender.translationInView(view)
             if abs(panVector.x) < self.view.bounds.width / 2 {
 
             horizontalCenterConstraint.constant = -panVector.x
             
             println ("pan changed")
+    
+                
             }
             
+            if panVector.x > self.view.bounds.width / 2 {
+                
+                swipeToChoose = .LikeSelection
+                
+            } else if panVector.x < -(self.view.bounds.width / 2) {
+                
+                swipeToChoose = .DislikeSelection
+                
+            }
+        
+        
         case .Ended :
             
+ 
+            switch self.swipeToChoose {
+                
+            case .DislikeSelection:
+                
+                self.performSegueWithIdentifier("wasNotLiked", sender: self)
+                
+            case .LikeSelection:
+                
+                self.performSegueWithIdentifier("wasLiked", sender: self)
+                
+            default: println("no selection")
             UIView.animateWithDuration(0.3, animations: { () -> Void in
                 self.horizontalCenterConstraint.constant = 0
                 self.view.layoutIfNeeded()
+                
+                }, completion: { (completed) -> Void in
             })
+                
+                
+            }
+
             
         default:
             println("default selection")
+  
         }
     }
 

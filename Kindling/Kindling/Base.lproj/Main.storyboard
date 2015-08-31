@@ -5,6 +5,40 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="gNz-XF-s20">
+            <objects>
+                <viewController id="AdH-g5-Kfa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W6F-Yn-cre"/>
+                        <viewControllerLayoutGuide type="bottom" id="gRS-GY-PJ6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="psz-JS-RXC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I was liked!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvb-Eg-FgQ">
+                                <rect key="frame" x="48" y="222" width="505" height="42.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42.5" id="TLQ-RR-uLY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tvb-Eg-FgQ" secondAttribute="trailing" constant="31" id="Lb1-Pu-FBE"/>
+                            <constraint firstItem="Tvb-Eg-FgQ" firstAttribute="top" secondItem="W6F-Yn-cre" secondAttribute="bottom" constant="202" id="QGd-zR-GD6"/>
+                            <constraint firstItem="Tvb-Eg-FgQ" firstAttribute="leading" secondItem="psz-JS-RXC" secondAttribute="leadingMargin" constant="32" id="ubI-Cc-GYF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RSQ-NI-EeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1139" y="-411"/>
+        </scene>
         <!--Root Presentation View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -42,6 +76,8 @@
                     <connections>
                         <outlet property="cardContainerView" destination="ZS7-4y-PDd" id="WbX-9o-EOD"/>
                         <outlet property="horizontalCenterConstraint" destination="3cB-DW-goA" id="cA5-ak-0Cu"/>
+                        <segue destination="AdH-g5-Kfa" kind="show" identifier="wasLiked" id="tce-f5-RCn"/>
+                        <segue destination="ijr-gg-BoD" kind="show" identifier="wasNotLiked" id="Sh3-Ef-MBD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -52,6 +88,40 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1136" y="267"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EVs-Zq-Rra">
+            <objects>
+                <viewController id="ijr-gg-BoD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5xR-Wd-UW9"/>
+                        <viewControllerLayoutGuide type="bottom" id="SPY-X4-Lr6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HYh-9Y-zLi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I wasn't liked :( :( :(" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLv-UV-bjz">
+                                <rect key="frame" x="25" y="239" width="550" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DoW-Fs-iCZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eLv-UV-bjz" firstAttribute="top" secondItem="5xR-Wd-UW9" secondAttribute="bottom" constant="219" id="g9K-0H-Lp6"/>
+                            <constraint firstItem="eLv-UV-bjz" firstAttribute="leading" secondItem="HYh-9Y-zLi" secondAttribute="leadingMargin" constant="9" id="k33-sW-QQm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eLv-UV-bjz" secondAttribute="trailing" constant="9" id="uid-rQ-RpS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1E-o8-DM1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136" y="1009"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yyv-aC-fjS">
@@ -120,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGP-mS-NPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="267"/>
+            <point key="canvasLocation" x="1653" y="267"/>
         </scene>
     </scenes>
     <resources>
