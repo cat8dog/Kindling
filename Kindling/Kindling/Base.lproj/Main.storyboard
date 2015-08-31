@@ -34,10 +34,22 @@
                             <constraint firstAttribute="centerX" secondItem="ZS7-4y-PDd" secondAttribute="centerX" id="3cB-DW-goA"/>
                             <constraint firstItem="ZS7-4y-PDd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="dph-TD-wN1"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="GJC-kf-CKX" appends="YES" id="Ow9-uA-Mj4"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="daJ-eH-FNV"/>
+                    <connections>
+                        <outlet property="cardContainerView" destination="ZS7-4y-PDd" id="WbX-9o-EOD"/>
+                        <outlet property="horizontalCenterConstraint" destination="3cB-DW-goA" id="cA5-ak-0Cu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="GJC-kf-CKX">
+                    <connections>
+                        <action selector="didPan:" destination="BYZ-38-t0r" id="Zd4-an-j9g"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1136" y="267"/>
         </scene>
