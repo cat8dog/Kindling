@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		287D1E091B93D51100F193E8 /* CaardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287D1E081B93D51100F193E8 /* CaardViewController.swift */; };
+		287D1E671B94DC6200F193E8 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287D1E661B94DC6200F193E8 /* RoundedImageView.swift */; };
 		287E6BBF1B8CF0C20023D9C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E6BBE1B8CF0C20023D9C7 /* AppDelegate.swift */; };
 		287E6BC41B8CF0C20023D9C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287E6BC21B8CF0C20023D9C7 /* Main.storyboard */; };
 		287E6BC61B8CF0C20023D9C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287E6BC51B8CF0C20023D9C7 /* Images.xcassets */; };
 		287E6BC91B8CF0C20023D9C7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 287E6BC71B8CF0C20023D9C7 /* LaunchScreen.xib */; };
 		287E6BD51B8CF0C20023D9C7 /* KindlingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E6BD41B8CF0C20023D9C7 /* KindlingTests.swift */; };
 		287E6BE01B8CF17A0023D9C7 /* RootPresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E6BDF1B8CF17A0023D9C7 /* RootPresentationViewController.swift */; };
-		287E6BE21B8CF2DB0023D9C7 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E6BE11B8CF2DB0023D9C7 /* CardViewController.swift */; };
-		287E6BE41B8CFD770023D9C7 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287E6BE31B8CFD770023D9C7 /* PictureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		287D1E081B93D51100F193E8 /* CaardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaardViewController.swift; sourceTree = "<group>"; };
+		287D1E661B94DC6200F193E8 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		287E6BB91B8CF0C20023D9C7 /* Kindling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kindling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		287E6BBD1B8CF0C20023D9C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		287E6BBE1B8CF0C20023D9C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,8 +40,6 @@
 		287E6BD31B8CF0C20023D9C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		287E6BD41B8CF0C20023D9C7 /* KindlingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KindlingTests.swift; sourceTree = "<group>"; };
 		287E6BDF1B8CF17A0023D9C7 /* RootPresentationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootPresentationViewController.swift; sourceTree = "<group>"; };
-		287E6BE11B8CF2DB0023D9C7 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
-		287E6BE31B8CFD770023D9C7 /* PictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,8 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				287E6BDF1B8CF17A0023D9C7 /* RootPresentationViewController.swift */,
-				287E6BE31B8CFD770023D9C7 /* PictureView.swift */,
-				287E6BE11B8CF2DB0023D9C7 /* CardViewController.swift */,
+				287D1E081B93D51100F193E8 /* CaardViewController.swift */,
+				287D1E661B94DC6200F193E8 /* RoundedImageView.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -226,10 +226,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				287D1E671B94DC6200F193E8 /* RoundedImageView.swift in Sources */,
 				287E6BE01B8CF17A0023D9C7 /* RootPresentationViewController.swift in Sources */,
 				287E6BBF1B8CF0C20023D9C7 /* AppDelegate.swift in Sources */,
-				287E6BE21B8CF2DB0023D9C7 /* CardViewController.swift in Sources */,
-				287E6BE41B8CFD770023D9C7 /* PictureView.swift in Sources */,
+				287D1E091B93D51100F193E8 /* CaardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +427,7 @@
 				287E6BDA1B8CF0C20023D9C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		287E6BDB1B8CF0C20023D9C7 /* Build configuration list for PBXNativeTarget "KindlingTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +436,7 @@
 				287E6BDD1B8CF0C20023D9C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

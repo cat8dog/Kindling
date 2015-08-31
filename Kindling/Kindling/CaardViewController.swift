@@ -1,10 +1,14 @@
+
+
 import UIKit
 
-class RootPresentationViewController: UIViewController {
+class CaardViewController: UIViewController {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        roundViewCorners()
+        
 
         // Do any additional setup after loading the view.
     }
@@ -12,11 +16,13 @@ class RootPresentationViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        
-      //  var gesture = UIPanGestureRecognizer(target: self, action: Selector ("wasSwipped:"))
     }
     
 
+    func roundViewCorners() {
+        view.layer.cornerRadius = 5.0
+        view.clipsToBounds = true
+    }
     /*
     // MARK: - Navigation
 

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f0V-yo-5t2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Root Presentation View Controller-->
@@ -16,33 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wOd-24-NKU">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZS7-4y-PDd">
                                 <rect key="frame" x="180" y="84" width="240" height="280"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="PfL-7m-pen"/>
-                                    <constraint firstAttribute="width" constant="240" id="xw8-Gb-1oc"/>
+                                    <constraint firstAttribute="width" constant="240" id="7p2-pK-DaB"/>
+                                    <constraint firstAttribute="height" constant="280" id="Bgh-EK-sax"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="8vN-7t-aEj" kind="embed" id="vE7-jM-0Dz"/>
+                                    <segue destination="18O-eN-32A" kind="embed" id="ZKU-YC-Ybp"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="wOd-24-NKU" secondAttribute="centerX" id="JvH-8g-bce"/>
-                            <constraint firstItem="wOd-24-NKU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="oRt-ED-dmw"/>
+                            <constraint firstAttribute="centerX" secondItem="ZS7-4y-PDd" secondAttribute="centerX" id="3cB-DW-goA"/>
+                            <constraint firstItem="ZS7-4y-PDd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="dph-TD-wN1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="daJ-eH-FNV"/>
-                    <connections>
-                        <outlet property="cardContainter" destination="wOd-24-NKU" id="qL2-b9-7tE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132" y="179"/>
+            <point key="canvasLocation" x="1136" y="267"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yyv-aC-fjS">
@@ -60,75 +57,61 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vAp-0S-4K8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="447" y="198"/>
+            <point key="canvasLocation" x="451" y="267"/>
         </scene>
-        <!--Card View Controller-->
-        <scene sceneID="ALL-4g-uyR">
+        <!--Caard View Controller-->
+        <scene sceneID="mRM-RF-S97">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8vN-7t-aEj" customClass="CardViewController" customModule="Kindling" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="18O-eN-32A" customClass="CaardViewController" customModule="Kindling" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Yzv-hb-TX4"/>
-                        <viewControllerLayoutGuide type="bottom" id="E9J-nt-ROl"/>
+                        <viewControllerLayoutGuide type="top" id="wMu-5o-TKB"/>
+                        <viewControllerLayoutGuide type="bottom" id="dX8-g6-WOn"/>
                     </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hYA-q8-NlY">
+                    <view key="view" opaque="NO" multipleTouchEnabled="YES" contentMode="center" id="qP0-7G-yvo">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="280"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Zebra" translatesAutoresizingMaskIntoConstraints="NO" id="sXU-Ak-ra7">
-                                <rect key="frame" x="19" y="24" width="202" height="236"/>
-                                <gestureRecognizers/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portrait" translatesAutoresizingMaskIntoConstraints="NO" id="upz-Bg-jsD" customClass="RoundedImageView" customModule="Kindling" customModuleProvider="target">
+                                <rect key="frame" x="95" y="8" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="202" id="q7T-b0-JlK"/>
-                                    <constraint firstAttribute="height" constant="236" id="zLs-TT-FOX"/>
+                                    <constraint firstAttribute="width" constant="50" id="AAB-Th-Kkm"/>
+                                    <constraint firstAttribute="height" constant="50" id="emL-U9-WtY"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNL-6y-SC0">
-                                <rect key="frame" x="99" y="226" width="42.5" height="20.5"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh1-AN-1p7">
+                                <rect key="frame" x="16" y="66" width="208" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="stuff stuff stuff" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cH-Se-pod">
-                                <rect key="frame" x="65" y="251" width="110" height="20.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit efficitur fermentum." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iz-3x-F46">
+                                <rect key="frame" x="16" y="94" width="208" height="178"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <gestureRecognizers/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sXU-Ak-ra7" firstAttribute="top" secondItem="Yzv-hb-TX4" secondAttribute="bottom" constant="24" id="4XW-G9-v27"/>
-                            <constraint firstAttribute="centerY" secondItem="sXU-Ak-ra7" secondAttribute="centerY" constant="-2" id="653-03-JT8"/>
-                            <constraint firstItem="sXU-Ak-ra7" firstAttribute="centerX" secondItem="YNL-6y-SC0" secondAttribute="centerX" id="889-6o-qJQ"/>
-                            <constraint firstItem="sXU-Ak-ra7" firstAttribute="centerX" secondItem="hYA-q8-NlY" secondAttribute="centerX" id="B1w-WW-WF0"/>
-                            <constraint firstItem="sXU-Ak-ra7" firstAttribute="centerX" secondItem="9cH-Se-pod" secondAttribute="centerX" id="UVD-2b-PPV"/>
-                            <constraint firstItem="E9J-nt-ROl" firstAttribute="top" secondItem="9cH-Se-pod" secondAttribute="bottom" constant="8" id="VRf-qy-OCh"/>
-                            <constraint firstItem="9cH-Se-pod" firstAttribute="top" secondItem="YNL-6y-SC0" secondAttribute="bottom" constant="5" id="aS3-UC-Qjd"/>
+                            <constraint firstItem="upz-Bg-jsD" firstAttribute="top" secondItem="wMu-5o-TKB" secondAttribute="bottom" constant="8" id="1Gy-AR-EiP"/>
+                            <constraint firstAttribute="centerX" secondItem="upz-Bg-jsD" secondAttribute="centerX" id="90u-ye-pl8"/>
+                            <constraint firstItem="2iz-3x-F46" firstAttribute="leading" secondItem="qP0-7G-yvo" secondAttribute="leadingMargin" id="A3Y-eH-hZM"/>
+                            <constraint firstItem="Gh1-AN-1p7" firstAttribute="trailing" secondItem="qP0-7G-yvo" secondAttribute="trailingMargin" id="Kpr-yy-d1f"/>
+                            <constraint firstItem="Gh1-AN-1p7" firstAttribute="top" secondItem="upz-Bg-jsD" secondAttribute="bottom" constant="8" id="O61-Tp-oq2"/>
+                            <constraint firstItem="Gh1-AN-1p7" firstAttribute="leading" secondItem="qP0-7G-yvo" secondAttribute="leadingMargin" id="ThZ-tT-hjp"/>
+                            <constraint firstItem="2iz-3x-F46" firstAttribute="trailing" secondItem="qP0-7G-yvo" secondAttribute="trailingMargin" id="ldm-CL-FjF"/>
+                            <constraint firstItem="2iz-3x-F46" firstAttribute="top" secondItem="Gh1-AN-1p7" secondAttribute="bottom" constant="7.5" id="pWg-zd-qSE"/>
+                            <constraint firstItem="dX8-g6-WOn" firstAttribute="top" secondItem="2iz-3x-F46" secondAttribute="bottom" constant="8" id="zEh-tx-oWl"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="TRl-Fu-a3V" appends="YES" id="R2h-8g-pNx"/>
-                        </connections>
                     </view>
                     <toolbarItems/>
-                    <connections>
-                        <outlet property="myImage" destination="sXU-Ak-ra7" id="wpu-df-HA6"/>
-                        <outlet property="panFromCentre" destination="B1w-WW-WF0" id="f95-Vr-tfj"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sVF-4x-Cy1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="TRl-Fu-a3V">
-                    <connections>
-                        <action selector="swipeImage:" destination="8vN-7t-aEj" id="wuY-kF-M2i"/>
-                    </connections>
-                </panGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VGP-mS-NPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312" y="-312"/>
+            <point key="canvasLocation" x="1665" y="267"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Zebra" width="1568" height="2048"/>
+        <image name="portrait" width="904" height="1176"/>
     </resources>
 </document>

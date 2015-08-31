@@ -27,7 +27,6 @@ class CardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,15 +35,32 @@ class CardViewController: UIViewController {
     }
     
     //override func awakeFromNib() {
-//    override func viewDidLayoutSubviews() {
-//        super.viewDidLayoutSubviews()
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        // Failed method: attempt to round out corners of the card by 5 pixels.
+        roundViewCorners()
+    
+        
+        
 //        myImage.layer.cornerRadius = (myImage.bounds.size.width + myImage.bounds.size.height) / 4
 //        myImage.clipsToBounds = true
-//        var gesture = UIPanGestureRecognizer(target: self, action: Selector ("swipeImage:"))
-//        myImage.addGestureRecognizer(gesture)
-//        myImage.userInteractionEnabled = true
+        var gesture = UIPanGestureRecognizer(target: self, action: Selector ("swipeImage:"))
+        myImage.addGestureRecognizer(gesture)
+        myImage.userInteractionEnabled = true
         
     }
+    
+    
+    // This didn't work out ->
+    
+    func roundViewCorners(){
+        let imageView = UIImageView(frame: CGRectMake(0, 0, 100, 100))
+        imageView.backgroundColor = UIColor.grayColor()
+        imageView.layer.cornerRadius = 5.0
+        imageView.clipsToBounds = true
+    }
+    
     
     
     
